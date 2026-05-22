@@ -1,6 +1,8 @@
 # Intro Python  
 ## Actividad 1  
 
+
+**Curso Python = https://www.youtube.com/@ProCodeTutoriales**
 Ver notas claras sobre Variables  
 ``` Python
 # Declaración de variables (Atributos de una entidad)
@@ -33,4 +35,21 @@ print("Componentes a auditar:")
 for item in componentes_si:
  print(f"- {item}")
   
+```
+
+## para exportar a un csv  
+para exportar a un archivo csv desde python  
+se toca importar la biblioteca csv  
+
+``` python
+import csv  
+with open('people.csv') as f:
+    reader = csv.reader(f)
+    for row in reader :
+        print("Ap Paterno : {0}, Ap Materno : {1}, Nombre : {2}, Ciudad : {3}".format(row[0], row[1], row[2], row[3]))
+```
+
+en esta linea, cuando ponemos a f podemos poner el simbolo o signo que en nuestro csv este guardando por ejemplo si esta separado por un simbolo o caracter se utilizara el **delimiter = "( Simbolo o Caracter)"**
+``` python
+reader = csv.reader(f delimiter = "$")
 ```
